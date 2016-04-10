@@ -57,7 +57,7 @@
         XCTAssertTrue(applicationsArray, @"Should contain an array of entries");
         XCTAssertTrue(applicationsArray.count == 20, @"Should have 20 entries");
         [expectation fulfill];
-    } faulure:^(NSString *message, NSUInteger statusCode) {
+    } failure:^(NSString *message, NSUInteger statusCode) {
         //Should not see this
         XCTAssertTrue(NO, @"Should not have an error");
     }];
@@ -82,7 +82,7 @@
     [self.sut retrieveApplicationsSuccess:^(NSArray *applicationsArray) {
         //Should not see this
         XCTAssertTrue(NO, @"Should not get receive applications data");
-    } faulure:^(NSString *message, NSUInteger statusCode) {
+    } failure:^(NSString *message, NSUInteger statusCode) {
         XCTAssertTrue(statusCode == (NSUInteger)404, @"Status code should be 404");
         XCTAssertEqualObjects(message, @"Request failed: not found (404)", @"Should receive 404 error");
         [expectation fulfill];
