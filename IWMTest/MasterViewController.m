@@ -8,10 +8,16 @@
 
 #import "MasterViewController.h"
 #import "DetailViewController.h"
+#import "IWMNetworkManager.h"
+#import "IWMApplicationsManager.h"
+#import "IWMApplication.h"
+#import "IWMApplicationTableViewCell.h"
+#import <SDWebImage/UIImageView+WebCache.h>
 
 @interface MasterViewController ()
 
-@property NSMutableArray *objects;
+@property NSArray *objects;
+@property IWMApplicationsManager *applicationsManager;
 @end
 
 @implementation MasterViewController
@@ -19,11 +25,21 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    self.navigationItem.leftBarButtonItem = self.editButtonItem;
-
-    UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject:)];
-    self.navigationItem.rightBarButtonItem = addButton;
     self.detailViewController = (DetailViewController *)[[self.splitViewController.viewControllers lastObject] topViewController];
+    
+    //Custom setup
+    IWMNetworkManager *nw = [[IWMNetworkManager alloc] init];
+    self.applicationsManager = [[IWMApplicationsManager alloc] initWithNetworkManager:nw];
+    
+    __weak typeof (self) weakSelf = self;
+    [self.applicationsManager getApplicationsWithSuccessBlock:^(NSArray *applicationsArray) {
+        weakSelf.objects = applicationsArray;
+        [weakSelf.tableView reloadData];
+    } failureBlock:^(NSString *message) {
+        //TO DO
+    }];
+    
+    
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -36,14 +52,6 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void)insertNewObject:(id)sender {
-    if (!self.objects) {
-        self.objects = [[NSMutableArray alloc] init];
-    }
-    [self.objects insertObject:[NSDate date] atIndex:0];
-    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
-    [self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
-}
 
 #pragma mark - Segues
 
@@ -69,25 +77,17 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
+    IWMApplicationTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ApplicationCell" forIndexPath:indexPath];
 
-    NSDate *object = self.objects[indexPath.row];
-    cell.textLabel.text = [object description];
+    IWMApplication *app = self.objects[indexPath.row];
+    cell.nameLabel.text = app.name;
+    cell.categoryLabel.text = app.category;
+    cell.artistLabel.text = app.artist;
+    [cell.photoImageView sd_setImageWithURL:[NSURL URLWithString:app.photo]
+                      placeholderImage:[UIImage imageNamed:@"placeholder.png"]];
+    
     return cell;
 }
 
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        [self.objects removeObjectAtIndex:indexPath.row];
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view.
-    }
-}
 
 @end

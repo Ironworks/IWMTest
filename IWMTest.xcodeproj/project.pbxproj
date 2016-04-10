@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		6531949BDAEF19160BAFFFA0 /* libPods-IWMTestTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D17FBC1BF3BD8646195A9F93 /* libPods-IWMTestTests.a */; };
+		F04A0A031CBAE4C400F7AFDA /* IWMApplicationBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = F04A0A021CBAE4C400F7AFDA /* IWMApplicationBuilder.m */; };
+		F04A0A051CBAED7700F7AFDA /* application.json in Resources */ = {isa = PBXBuildFile; fileRef = F04A0A041CBAED7700F7AFDA /* application.json */; };
+		F04A0A091CBB023000F7AFDA /* IWMApplicationTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F04A0A081CBB023000F7AFDA /* IWMApplicationTableViewCell.m */; };
+		F04A0A0A1CBB023000F7AFDA /* IWMApplicationTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F04A0A081CBB023000F7AFDA /* IWMApplicationTableViewCell.m */; };
 		F04F82401CB7A3930081B268 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F04F823F1CB7A3920081B268 /* main.m */; };
 		F04F82431CB7A3930081B268 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F04F82421CB7A3930081B268 /* AppDelegate.m */; };
 		F04F82461CB7A3930081B268 /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F04F82451CB7A3930081B268 /* MasterViewController.m */; };
@@ -18,6 +22,13 @@
 		F04F82681CB7AC500081B268 /* IWMApplicationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F04F82671CB7AC500081B268 /* IWMApplicationTests.m */; };
 		F04F826B1CB7AD650081B268 /* IWMApplication.m in Sources */ = {isa = PBXBuildFile; fileRef = F04F826A1CB7AD650081B268 /* IWMApplication.m */; };
 		F04F826C1CB7AD650081B268 /* IWMApplication.m in Sources */ = {isa = PBXBuildFile; fileRef = F04F826A1CB7AD650081B268 /* IWMApplication.m */; };
+		F04F826E1CB7B41E0081B268 /* IWMApplicationsManagerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F04F826D1CB7B41E0081B268 /* IWMApplicationsManagerTests.m */; };
+		F04F82721CB7B5CC0081B268 /* IWMApplicationsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F04F82711CB7B5CC0081B268 /* IWMApplicationsManager.m */; };
+		F04F82751CB81FB00081B268 /* applications.json in Resources */ = {isa = PBXBuildFile; fileRef = F04F82741CB81FAF0081B268 /* applications.json */; };
+		F04F82771CB820A70081B268 /* NetworkManagerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F04F82761CB820A70081B268 /* NetworkManagerTests.m */; };
+		F04F827B1CB821E10081B268 /* IWMNetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F04F827A1CB821E00081B268 /* IWMNetworkManager.m */; };
+		F04F827C1CB821E10081B268 /* IWMNetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F04F827A1CB821E00081B268 /* IWMNetworkManager.m */; };
+		F09630CA1CBA997B0003A96C /* IWMApplicationBuilderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F09630C91CBA997B0003A96C /* IWMApplicationBuilderTests.m */; };
 		FA847E559ABF51C0486A5C6C /* libPods-IWMTest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C9E0F0F4D1102B0BFA43A76B /* libPods-IWMTest.a */; };
 /* End PBXBuildFile section */
 
@@ -38,6 +49,11 @@
 		D17FBC1BF3BD8646195A9F93 /* libPods-IWMTestTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-IWMTestTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC55145BFD5F6E75D1D3037E /* Pods-IWMTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IWMTest.release.xcconfig"; path = "Pods/Target Support Files/Pods-IWMTest/Pods-IWMTest.release.xcconfig"; sourceTree = "<group>"; };
 		E1A4BD6178E0D900FEE827ED /* Pods-IWMTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IWMTest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IWMTest/Pods-IWMTest.debug.xcconfig"; sourceTree = "<group>"; };
+		F04A0A011CBAE4C400F7AFDA /* IWMApplicationBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IWMApplicationBuilder.h; path = Model/IWMApplicationBuilder.h; sourceTree = "<group>"; };
+		F04A0A021CBAE4C400F7AFDA /* IWMApplicationBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IWMApplicationBuilder.m; path = Model/IWMApplicationBuilder.m; sourceTree = "<group>"; };
+		F04A0A041CBAED7700F7AFDA /* application.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = application.json; sourceTree = "<group>"; };
+		F04A0A071CBB023000F7AFDA /* IWMApplicationTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IWMApplicationTableViewCell.h; sourceTree = "<group>"; };
+		F04A0A081CBB023000F7AFDA /* IWMApplicationTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IWMApplicationTableViewCell.m; sourceTree = "<group>"; };
 		F04F823B1CB7A3920081B268 /* IWMTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IWMTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F04F823F1CB7A3920081B268 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F04F82411CB7A3930081B268 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -55,6 +71,14 @@
 		F04F82671CB7AC500081B268 /* IWMApplicationTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IWMApplicationTests.m; sourceTree = "<group>"; };
 		F04F82691CB7AD650081B268 /* IWMApplication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IWMApplication.h; path = Model/IWMApplication.h; sourceTree = "<group>"; };
 		F04F826A1CB7AD650081B268 /* IWMApplication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IWMApplication.m; path = Model/IWMApplication.m; sourceTree = "<group>"; };
+		F04F826D1CB7B41E0081B268 /* IWMApplicationsManagerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IWMApplicationsManagerTests.m; sourceTree = "<group>"; };
+		F04F82701CB7B5CC0081B268 /* IWMApplicationsManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IWMApplicationsManager.h; path = ApplicationsManager/IWMApplicationsManager.h; sourceTree = "<group>"; };
+		F04F82711CB7B5CC0081B268 /* IWMApplicationsManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IWMApplicationsManager.m; path = ApplicationsManager/IWMApplicationsManager.m; sourceTree = "<group>"; };
+		F04F82741CB81FAF0081B268 /* applications.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = applications.json; sourceTree = "<group>"; };
+		F04F82761CB820A70081B268 /* NetworkManagerTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkManagerTests.m; sourceTree = "<group>"; };
+		F04F82791CB821E00081B268 /* IWMNetworkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IWMNetworkManager.h; path = NetworkManager/IWMNetworkManager.h; sourceTree = "<group>"; };
+		F04F827A1CB821E00081B268 /* IWMNetworkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IWMNetworkManager.m; path = NetworkManager/IWMNetworkManager.m; sourceTree = "<group>"; };
+		F09630C91CBA997B0003A96C /* IWMApplicationBuilderTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IWMApplicationBuilderTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +121,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		F04A0A061CBB020C00F7AFDA /* Table Cells */ = {
+			isa = PBXGroup;
+			children = (
+				F04A0A071CBB023000F7AFDA /* IWMApplicationTableViewCell.h */,
+				F04A0A081CBB023000F7AFDA /* IWMApplicationTableViewCell.m */,
+			);
+			name = "Table Cells";
+			sourceTree = "<group>";
+		};
 		F04F82321CB7A3920081B268 = {
 			isa = PBXGroup;
 			children = (
@@ -120,6 +153,9 @@
 		F04F823D1CB7A3920081B268 /* IWMTest */ = {
 			isa = PBXGroup;
 			children = (
+				F04A0A061CBB020C00F7AFDA /* Table Cells */,
+				F04F82781CB8219C0081B268 /* NetworkManager */,
+				F04F826F1CB7B4E90081B268 /* ApplicationsManager */,
 				F04F82661CB7AB800081B268 /* Model */,
 				F04F82411CB7A3930081B268 /* AppDelegate.h */,
 				F04F82421CB7A3930081B268 /* AppDelegate.m */,
@@ -147,8 +183,12 @@
 		F04F825A1CB7A3940081B268 /* IWMTestTests */ = {
 			isa = PBXGroup;
 			children = (
+				F04F82731CB81F7E0081B268 /* Fixtures */,
 				F04F825D1CB7A3940081B268 /* Info.plist */,
 				F04F82671CB7AC500081B268 /* IWMApplicationTests.m */,
+				F04F826D1CB7B41E0081B268 /* IWMApplicationsManagerTests.m */,
+				F04F82761CB820A70081B268 /* NetworkManagerTests.m */,
+				F09630C91CBA997B0003A96C /* IWMApplicationBuilderTests.m */,
 			);
 			path = IWMTestTests;
 			sourceTree = "<group>";
@@ -158,8 +198,37 @@
 			children = (
 				F04F82691CB7AD650081B268 /* IWMApplication.h */,
 				F04F826A1CB7AD650081B268 /* IWMApplication.m */,
+				F04A0A011CBAE4C400F7AFDA /* IWMApplicationBuilder.h */,
+				F04A0A021CBAE4C400F7AFDA /* IWMApplicationBuilder.m */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		F04F826F1CB7B4E90081B268 /* ApplicationsManager */ = {
+			isa = PBXGroup;
+			children = (
+				F04F82701CB7B5CC0081B268 /* IWMApplicationsManager.h */,
+				F04F82711CB7B5CC0081B268 /* IWMApplicationsManager.m */,
+			);
+			name = ApplicationsManager;
+			sourceTree = "<group>";
+		};
+		F04F82731CB81F7E0081B268 /* Fixtures */ = {
+			isa = PBXGroup;
+			children = (
+				F04A0A041CBAED7700F7AFDA /* application.json */,
+				F04F82741CB81FAF0081B268 /* applications.json */,
+			);
+			name = Fixtures;
+			sourceTree = "<group>";
+		};
+		F04F82781CB8219C0081B268 /* NetworkManager */ = {
+			isa = PBXGroup;
+			children = (
+				F04F82791CB821E00081B268 /* IWMNetworkManager.h */,
+				F04F827A1CB821E00081B268 /* IWMNetworkManager.m */,
+			);
+			name = NetworkManager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,6 +327,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F04A0A051CBAED7700F7AFDA /* application.json in Resources */,
+				F04F82751CB81FB00081B268 /* applications.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -361,8 +432,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F04F827B1CB821E10081B268 /* IWMNetworkManager.m in Sources */,
+				F04A0A091CBB023000F7AFDA /* IWMApplicationTableViewCell.m in Sources */,
 				F04F826B1CB7AD650081B268 /* IWMApplication.m in Sources */,
+				F04A0A031CBAE4C400F7AFDA /* IWMApplicationBuilder.m in Sources */,
 				F04F82431CB7A3930081B268 /* AppDelegate.m in Sources */,
+				F04F82721CB7B5CC0081B268 /* IWMApplicationsManager.m in Sources */,
 				F04F82461CB7A3930081B268 /* MasterViewController.m in Sources */,
 				F04F82401CB7A3930081B268 /* main.m in Sources */,
 				F04F82491CB7A3930081B268 /* DetailViewController.m in Sources */,
@@ -373,7 +448,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F09630CA1CBA997B0003A96C /* IWMApplicationBuilderTests.m in Sources */,
+				F04A0A0A1CBB023000F7AFDA /* IWMApplicationTableViewCell.m in Sources */,
+				F04F827C1CB821E10081B268 /* IWMNetworkManager.m in Sources */,
+				F04F82771CB820A70081B268 /* NetworkManagerTests.m in Sources */,
 				F04F826C1CB7AD650081B268 /* IWMApplication.m in Sources */,
+				F04F826E1CB7B41E0081B268 /* IWMApplicationsManagerTests.m in Sources */,
 				F04F82681CB7AC500081B268 /* IWMApplicationTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
