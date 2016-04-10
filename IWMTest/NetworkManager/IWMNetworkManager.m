@@ -15,7 +15,7 @@ NSString * const kURL = @"http://ax.itunes.apple.com/WebObjects/MZStoreServices.
 @implementation IWMNetworkManager
 
 
-- (void)retrieveApplicationsSuccess:(success)success faulure:(failure)failure {
+- (void)retrieveApplicationsSuccess:(success)success failure:(failure)failure {
     
     NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
     AFURLSessionManager *manager = [[AFURLSessionManager alloc] initWithSessionConfiguration:configuration];

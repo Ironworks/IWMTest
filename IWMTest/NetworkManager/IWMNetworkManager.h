@@ -15,6 +15,6 @@ typedef void (^failure) (NSString *message, NSUInteger statusCode);
 
 
 - (void)retrieveApplicationsSuccess:(success)success
-                            faulure:(failure)failure;
+                            failure:(failure)failure;
 
 @end
