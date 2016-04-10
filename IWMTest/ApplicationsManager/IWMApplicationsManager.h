@@ -8,11 +8,15 @@
 
 #import <Foundation/Foundation.h>
 
+@class IWMNetworkManager;
 @interface IWMApplicationsManager : NSObject
 
 typedef void (^successBlock) (NSArray *applicationsArray);
 typedef void (^failureBlock) (NSString *message);
 
+@property (nonatomic, strong, readonly) IWMNetworkManager *networkManager;
+
+-(instancetype) initWithNetworkManager:(IWMNetworkManager *)networkManager;
 
 - (void)getApplicationsWithSuccessBlock:(successBlock)successBlock
                            failureBlock:(failureBlock)failureBlock;

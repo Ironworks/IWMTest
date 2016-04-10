@@ -7,8 +7,19 @@
 //
 
 #import "IWMApplicationsManager.h"
+#import "IWMNetworkManager.h"
 
 @implementation IWMApplicationsManager
+
+
+-(instancetype) initWithNetworkManager:(IWMNetworkManager *)networkManager {
+    
+    if (self = [super init]) {
+        _networkManager = networkManager;
+    }
+    
+    return self;
+}
 
 - (void)getApplicationsWithSuccessBlock:(successBlock)successBlock
                                     failureBlock:(failureBlock)failureBlock
