@@ -10,4 +10,11 @@
 
 @interface IWMNetworkManager : NSObject
 
+typedef void (^success) (NSArray *applicationsArray);
+typedef void (^failure) (NSString *message, NSUInteger statusCode);
+
+
+- (void)retrieveApplicationsSuccess:(success)success
+                            faulure:(failure)failure;
+
 @end
