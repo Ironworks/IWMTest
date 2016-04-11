@@ -7,8 +7,13 @@
 //
 
 #import "DetailViewController.h"
+#import "IWMApplication.h"
+#import <SDWebImage/UIImageView+WebCache.h>
 
 @interface DetailViewController ()
+@property (weak, nonatomic) IBOutlet UIImageView *photoImageView;
+@property (weak, nonatomic) IBOutlet UITextView *summaryTextView;
+
 
 @end
 
@@ -27,9 +32,9 @@
 
 - (void)configureView {
     // Update the user interface for the detail item.
-    if (self.detailItem) {
-        self.detailDescriptionLabel.text = [self.detailItem description];
-    }
+    [self.photoImageView sd_setImageWithURL:[NSURL URLWithString:self.detailItem.photo]
+                           placeholderImage:[UIImage imageNamed:@"placeholder.png"]];
+    self.summaryTextView.text = self.detailItem.summary;
 }
 
 - (void)viewDidLoad {
