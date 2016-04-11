@@ -10,7 +10,7 @@
 #import "AFNetworking.h"
 
 
-NSString * const kURL = @"http://ax.itunes.apple.com/WebObjects/MZStoreServices.woa/ws/RSS/toppaidapplications/limit=20/json";
+NSString * const kURL = @"http://ax.itunes.apple.com/WebObjects/MZStoreServices.woa/ws/RSS/toppaidapplications/limit=100/json";
 
 @implementation IWMNetworkManager
 

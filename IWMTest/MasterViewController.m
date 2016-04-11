@@ -13,7 +13,7 @@
 #import "IWMApplication.h"
 #import "IWMApplicationTableViewCell.h"
 #import <SDWebImage/UIImageView+WebCache.h>
-
+#import "MBProgressHUD.h"
 @interface MasterViewController ()
 
 @property NSArray *objects;
@@ -28,6 +28,8 @@
     self.detailViewController = (DetailViewController *)[[self.splitViewController.viewControllers lastObject] topViewController];
     
     //Custom setup
+    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    
     IWMNetworkManager *nw = [[IWMNetworkManager alloc] init];
     self.applicationsManager = [[IWMApplicationsManager alloc] initWithNetworkManager:nw];
     
@@ -35,8 +37,24 @@
     [self.applicationsManager getApplicationsWithSuccessBlock:^(NSArray *applicationsArray) {
         weakSelf.objects = applicationsArray;
         [weakSelf.tableView reloadData];
+        [MBProgressHUD hideHUDForView:self.view animated:YES];
     } failureBlock:^(NSString *message) {
-        //TO DO
+        [MBProgressHUD hideHUDForView:self.view animated:YES];
+        UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Error"
+                                                                       message:@"No data available"
+                                                                preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertAction* ok = [UIAlertAction
+                             actionWithTitle:@"OK"
+                             style:UIAlertActionStyleDefault
+                             handler:^(UIAlertAction * action)
+                             {
+                                 [alert dismissViewControllerAnimated:YES completion:nil];
+                                 
+                             }];
+        
+        [alert addAction:ok];
+        
+        [self presentViewController:alert animated:YES completion:nil];
     }];
     
     
