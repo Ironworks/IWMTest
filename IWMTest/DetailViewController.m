@@ -32,6 +32,7 @@
 
 - (void)configureView {
     // Update the user interface for the detail item.
+    self.title = self.detailItem.name;
     [self.photoImageView sd_setImageWithURL:[NSURL URLWithString:self.detailItem.photo]
                            placeholderImage:[UIImage imageNamed:@"placeholder.png"]];
     self.summaryTextView.text = self.detailItem.summary;
